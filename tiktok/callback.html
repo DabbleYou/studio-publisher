@@ -1,0 +1,9 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>TikTok sign-in – Studio Publisher</title><link rel="stylesheet" href="../style.css"></head><body><header><a class="brand" href=".././">Studio Publisher</a><nav><a href="../privacy.html">Privacy Policy</a><a href="../terms.html">Terms of Service</a></nav></header>
+<h1>TikTok sign-in</h1><div id="out"><p>Waiting for TikTok…</p></div>
+<script>
+const q = new URLSearchParams(location.search), out = document.getElementById("out");
+if (q.get("error")) out.innerHTML = "<p>TikTok did not sign in: <code></code></p>", out.querySelector("code").textContent = q.get("error") + " " + (q.get("error_description") || "");
+else if (q.get("code")) out.innerHTML = "<p>Signed in. Copy this whole address and paste it to Claude:</p><p><code></code></p>", out.querySelector("code").textContent = location.href;
+</script>
+<p>This page only shows the one-time sign-in code to the owner. It sends nothing anywhere.</p>
+<footer>Studio Publisher · Lola's Window · Contact: <a href="mailto:lifepixel984@gmail.com">lifepixel984@gmail.com</a> · <a href="../privacy.html">Privacy Policy</a> · <a href="../terms.html">Terms of Service</a></footer></body></html>
